@@ -1,0 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(214, 17%, 92%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+ h2{
+    font-weight: 600;
+ }
+ strong{
+        font-size: larger;
+
+ }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto ;
+    gap: 25px;
+    width:min(1440px, 100%);
+    padding: 100px;
+
+}
+
+.card {
+    border-radius: 10px;
+   box-shadow: 25px 50px 30px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    gap: 10px;
+}
+
+.card1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    background-color:hsl(263, 55%, 52%) ;
+    background-image:url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 60px;
+    color: hsl(214, 17%, 92%);
+}
+.card2{
+        background-color: hsl(224, 10%, 45%);
+        color: hsl(214, 17%, 92%);
+
+}
+.card3{
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    background-color:hsl(0, 0%, 100%);
+    color: hsl(224, 10%, 45%);
+}
+
+.card4{
+    background-color: hsl(0, 0%, 100%);
+    color:hsl(224, 10%, 45%);
+}
+
+.card5{
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(214, 17%, 92%);
+}
+
+.card3 h2, .card4 h2{
+    color:hsl(217, 19%, 35%);
+
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    font-size: smaller;
+    align-items: center;
+    line-height: 15px;
+}
+
+.name img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border: 2px solid hsl(264, 82%, 80%);
+}
+.card3 .name img, .card4 .name img{
+    border: none;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px){
+  .grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card4"
+      "card5"
+      "card3";
+    gap: 16px;
+    padding: 25px;
+  }
+
+  .card{
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .card1{ grid-area: card1; }
+  .card2{ grid-area: card2; }
+  .card3{ grid-area: card3; }
+  .card4{ grid-area: card4; }
+  .card5{ grid-area: card5; }
+
+}
+
+
+
+
+
+
